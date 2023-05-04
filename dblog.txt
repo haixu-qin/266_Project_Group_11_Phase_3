@@ -1,0 +1,36 @@
+2023-04-28T08:43:58.717+0000 I CONTROL  [initandlisten] MongoDB starting : pid=420 port=27017 dbpath=/home/runner/HTML-CSS-JS-1-doc/dbdir 64-bit host=b4aeffcf2f48
+2023-04-28T08:43:58.717+0000 I CONTROL  [initandlisten] db version v3.6.0
+2023-04-28T08:43:58.717+0000 I CONTROL  [initandlisten] git version: a57d8e71e6998a2d0afde7edc11bd23e5661c915
+2023-04-28T08:43:58.717+0000 I CONTROL  [initandlisten] allocator: tcmalloc
+2023-04-28T08:43:58.717+0000 I CONTROL  [initandlisten] modules: none
+2023-04-28T08:43:58.717+0000 I CONTROL  [initandlisten] build environment:
+2023-04-28T08:43:58.717+0000 I CONTROL  [initandlisten]     distarch: x86_64
+2023-04-28T08:43:58.717+0000 I CONTROL  [initandlisten]     target_arch: x86_64
+2023-04-28T08:43:58.717+0000 I CONTROL  [initandlisten] options: { processManagement: { fork: true }, storage: { dbPath: "dbdir" }, systemLog: { destination: "file", path: "dblog.txt" } }
+2023-04-28T08:43:58.717+0000 W -        [initandlisten] Detected unclean shutdown - /home/runner/HTML-CSS-JS-1-doc/dbdir/mongod.lock is not empty.
+2023-04-28T08:43:58.717+0000 I -        [initandlisten] Detected data files in /home/runner/HTML-CSS-JS-1-doc/dbdir created by the 'wiredTiger' storage engine, so setting the active storage engine to 'wiredTiger'.
+2023-04-28T08:43:58.717+0000 W STORAGE  [initandlisten] Recovering data from the last clean checkpoint.
+2023-04-28T08:43:58.717+0000 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=29625M,session_max=20000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),statistics_log=(wait=0),verbose=(recovery_progress),
+2023-04-28T08:43:58.947+0000 I STORAGE  [initandlisten] WiredTiger message [1682671438:947859][420:0x7f61f23f69c0], txn-recover: Main recovery loop: starting at 73/4352
+2023-04-28T08:43:58.948+0000 I STORAGE  [initandlisten] WiredTiger message [1682671438:948482][420:0x7f61f23f69c0], txn-recover: Recovering log 73 through 74
+2023-04-28T08:43:59.021+0000 I STORAGE  [initandlisten] WiredTiger message [1682671439:21031][420:0x7f61f23f69c0], txn-recover: Recovering log 74 through 74
+2023-04-28T08:43:59.087+0000 I CONTROL  [initandlisten] 
+2023-04-28T08:43:59.087+0000 I CONTROL  [initandlisten] ** WARNING: Access control is not enabled for the database.
+2023-04-28T08:43:59.087+0000 I CONTROL  [initandlisten] **          Read and write access to data and configuration is unrestricted.
+2023-04-28T08:43:59.087+0000 I CONTROL  [initandlisten] 
+2023-04-28T08:43:59.087+0000 I CONTROL  [initandlisten] ** WARNING: This server is bound to localhost.
+2023-04-28T08:43:59.087+0000 I CONTROL  [initandlisten] **          Remote systems will be unable to connect to this server. 
+2023-04-28T08:43:59.087+0000 I CONTROL  [initandlisten] **          Start the server with --bind_ip <address> to specify which IP 
+2023-04-28T08:43:59.087+0000 I CONTROL  [initandlisten] **          addresses it should serve responses from, or with --bind_ip_all to
+2023-04-28T08:43:59.087+0000 I CONTROL  [initandlisten] **          bind to all interfaces. If this behavior is desired, start the
+2023-04-28T08:43:59.087+0000 I CONTROL  [initandlisten] **          server with --bind_ip 127.0.0.1 to disable this warning.
+2023-04-28T08:43:59.087+0000 I CONTROL  [initandlisten] 
+2023-04-28T08:43:59.110+0000 I FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory '/home/runner/HTML-CSS-JS-1-doc/dbdir/diagnostic.data'
+2023-04-28T08:43:59.112+0000 I NETWORK  [initandlisten] waiting for connections on port 27017
+2023-04-28T08:43:59.685+0000 I NETWORK  [listener] connection accepted from 127.0.0.1:36272 #1 (1 connection now open)
+2023-04-28T08:43:59.692+0000 I NETWORK  [conn1] received client metadata from 127.0.0.1:36272 conn: { driver: { name: "nodejs|Mongoose", version: "5.1.0" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "5.15.0-1032-gcp" }, platform: "Node.js v18.12.1, LE (unified)", version: "5.1.0|7.0.3" }
+2023-04-28T08:43:59.702+0000 I NETWORK  [listener] connection accepted from 127.0.0.1:36282 #2 (2 connections now open)
+2023-04-28T08:43:59.706+0000 I NETWORK  [listener] connection accepted from 127.0.0.1:36286 #3 (3 connections now open)
+2023-04-28T08:43:59.707+0000 I NETWORK  [conn2] received client metadata from 127.0.0.1:36282 conn: { driver: { name: "nodejs|Mongoose", version: "5.1.0" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "5.15.0-1032-gcp" }, platform: "Node.js v18.12.1, LE (unified)", version: "5.1.0|7.0.3" }
+2023-04-28T08:43:59.708+0000 I NETWORK  [conn3] received client metadata from 127.0.0.1:36286 conn: { driver: { name: "nodejs|Mongoose", version: "5.1.0" }, os: { type: "Linux", name: "linux", architecture: "x64", version: "5.15.0-1032-gcp" }, platform: "Node.js v18.12.1, LE (unified)", version: "5.1.0|7.0.3" }
+2023-04-28T08:44:00.019+0000 I FTDC     [ftdc] Unclean full-time diagnostic data capture shutdown detected, found interim file, some metrics may have been lost. OK
