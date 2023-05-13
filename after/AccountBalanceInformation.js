@@ -72,13 +72,13 @@ let f2 = async () => {
   
   
 }
-let noz = (n) => { 
+let numberInputChecker = (n) => {
  if (n[0]=='0' || n[0]=='.') {
    return false;
  }
   return true;
 }
-let nof = (n) => { 
+let decimalPointFunction = (n) => {
   var dot = false;
   var fs = 0;
   var i=-1;
@@ -108,7 +108,7 @@ ad.addEventListener('click', async function() {
   console.log('ad button clicked'); 
   let amount = 
 document.getElementById('a1').value;
-  if (!amount || (parseFloat(amount))<=0 || !noz(amount) || nof(amount)) {
+  if (!amount || (parseFloat(amount))<=0 || !numberInputChecker(amount) || decimalPointFunction(amount)) {
     
     alert("invalid_input");
     return;
@@ -134,7 +134,7 @@ subtract.addEventListener('click', async function() {
   console.log('subtract button clicked'); 
   let amount = 
 document.getElementById('a2').value;
-  if (!amount || (parseFloat(amount))<=0 || !noz(amount) || nof(amount)) {
+  if (!amount || (parseFloat(amount))<=0 || !numberInputChecker(amount) ||  decimalPointFunction(amount)) {
     
     alert("invalid_input");
     return;

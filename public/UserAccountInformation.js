@@ -16,7 +16,9 @@ sendPostRequest('/newlog','running')
   .catch(function (error) {
      console.error('Error:', error);
   });
-function val(str) {
+
+//validating and sanitizing the username and password by utilizing the regex per style guidelines
+function validationAndSanitization(str) {
   
   if (!str || str.length < 1 || str.length > 127) {
     return false;
@@ -29,13 +31,15 @@ function val(str) {
   
   return true;
 }
-let noz = (n) => { 
+//checking to see if the input for numbers is valid or not per assignment guidelines of valid numbers or invalid numbers
+let numberInputChecker = (n) => {
  if (n[0]=='0' || n[0]=='.') {
    return false;
  }
   return true;
 }
-let nof = (n) => { 
+//checking decimal point location of an input per assignment guidelines
+let decimalPointFunction = (n) => {
   var dot = false;
   var fs = 0;
   var i=-1;
@@ -50,16 +54,17 @@ let nof = (n) => {
               return false; }
   return true;
 }
+//function checking for validation of the username, password, and balance.
 function f1() {
-    
+
   const username = document.getElementById('account-name').value;
   const password = document.getElementById('password').value;
   const balance = document.getElementById('balance').value;
   
-  if (!val(username) || !val(password)) { alert("invalid_input"); return null; }
+  if (!validationAndSanitization(username) || !validationAndSanitization(password)) { alert("invalid_input"); return null; }
   
   let amount = balance;
-  if (!amount || (parseFloat(amount))<0 || (parseFloat(amount))>4294967295.99 || !noz(amount) || nof(amount)) {
+  if (!amount || (parseFloat(amount))<0 || (parseFloat(amount))>4294967295.99 || !numberInputChecker(amount) || decimalPointFunction(amount)) {
   alert("invalid_input");
   return null;
   }
@@ -73,6 +78,7 @@ function f1() {
   
   return user;
 }
+//function checks to see if user data is valid. If so, it fetch's data from database related to user. If not it returns null.
 async function f2(url) {
   console.log("about to send post request");
   let user = f1();
