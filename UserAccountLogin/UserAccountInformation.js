@@ -105,7 +105,7 @@ form1.addEventListener('submit', async (evt) => {
       console.log(1);
       localStorage.setItem('username', username);
       console.log(2);
-      window.location.href = 'after/after.html'; 
+      window.location.href = 'AccountBalance/AccountBalanceInfo.html';
     } else if (response.status === 202) {
       alert('Username and password do not match!');
     }
