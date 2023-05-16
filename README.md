@@ -17,11 +17,12 @@ When you clone the github repository, you will need to reinstall the node packag
 Delete the node_modules(because its from linux) and run 'npm install' in the terminal to reinstall all the dependencies including bcrypt module.
 Create an account from MongoDB Atlas in order to successfully connect your database to the node.js server.
 Once its created, click on connect and "Connect to your application". Follow the instructions and place the link in index.js line 21.
-Then in terminal run node index.js. Application should run then in host 3000.
-Do not use the forward or back buttons on top of the address bar, if you want to go between web pages,
-type in the proper names for the html files in the address bar.
+Then in terminal run node index.js. Application should run then in port 3000.
+
 
 
 note: 1. it should show it got a post req at '/newlog'. 2. if it doesn't, reload the webpage.
 
 del /.git.
+
+
