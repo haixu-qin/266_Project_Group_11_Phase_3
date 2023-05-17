@@ -1,11 +1,10 @@
 Instructions for Running Web Application
 TA Instructions:
-Download MongoDB Linux 3.6.
 Client can can simply click on html files
 
 Other Group Instructions:
 Linux Users:
-Download MongoDB Linux 3.6 and node and Linux
+Download node.js(In case its already not embedded in your system)
 npm install <dne packages>(Linux) from node.js
 You will need a Linux Operating System, virtual box is suggested
 copy and paste "mongodb://localhost/mydb"(no quotes) at line 20 of index.js. 

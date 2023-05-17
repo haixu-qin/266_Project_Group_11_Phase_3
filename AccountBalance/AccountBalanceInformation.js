@@ -184,6 +184,6 @@ let f3 = async () => {
          window.location.href = "/UserAccountInfo.html";
       }
    });
-   document.getElementById('logout').style.display = "inline-block";
+   document.getElementById('logout').style.display = "none";
 }
 f3();

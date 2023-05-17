@@ -6,5 +6,5 @@ html {
 }
 
 .logout, .t {
-  display: inline-block;
+  display: none;
 }
