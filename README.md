@@ -8,6 +8,7 @@ Linux Users:
 Download MongoDB Linux 3.6 and node and Linux
 npm install <dne packages>(Linux) from node.js
 You will need a Linux Operating System, virtual box is suggested
+copy and paste "mongodb://localhost/mydb"(no quotes) at line 20 of index.js. 
 Then run MongoDBServer.sh
 
 Windows Users:
