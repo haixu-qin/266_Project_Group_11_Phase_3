@@ -45,6 +45,8 @@ const UserSchema = new mongoose.Schema({
    }
 });
 const User = mongoose.model('User', UserSchema);
+//clear db
+/*
 User.deleteMany({})
    .then(() => {
       console.log('All documents deleted');
@@ -52,6 +54,7 @@ User.deleteMany({})
    .catch((err) => {
       console.error(err);
    });
+*/
 async function checkUsernameAndPassword(username1, password1) {
 
    const user = await User.findOne({
