@@ -31,3 +31,33 @@
 2023-06-11T03:22:29.844+0000 I STORAGE  [conn2] createCollection: mydb.users with generated UUID: d7d8d483-5e60-4726-8ab2-b29425e81267
 2023-06-11T03:23:58.116+0000 I NETWORK  [conn2] end connection 127.0.0.1:47144 (1 connection now open)
 2023-06-11T03:23:58.116+0000 I NETWORK  [conn1] end connection 127.0.0.1:47132 (0 connections now open)
+2023-06-11T03:27:06.856+0000 E STORAGE  [thread3] WiredTiger error (2) [1686454026:856391][150:0x7ff34b3c6700], log-server: /home/runner/266ProjectGroup11Phase3-1/dbdir/journal: directory-list: opendir: No such file or directory
+2023-06-11T03:27:06.856+0000 E STORAGE  [thread3] WiredTiger error (2) [1686454026:856526][150:0x7ff34b3c6700], log-server: log pre-alloc server error: No such file or directory
+2023-06-11T03:27:06.856+0000 E STORAGE  [thread3] WiredTiger error (2) [1686454026:856547][150:0x7ff34b3c6700], log-server: log server error: No such file or directory
+2023-06-11T03:27:06.856+0000 E STORAGE  [thread3] WiredTiger error (-31804) [1686454026:856564][150:0x7ff34b3c6700], log-server: the process must exit and restart: WT_PANIC: WiredTiger library panic
+2023-06-11T03:27:06.856+0000 F -        [thread3] Fatal Assertion 28558 at src/mongo/db/storage/wiredtiger/wiredtiger_util.cpp 361
+2023-06-11T03:27:06.856+0000 F -        [thread3] 
+
+***aborting after fassert() failure
+
+
+2023-06-11T03:27:06.866+0000 F -        [thread3] Got signal: 6 (Aborted).
+
+ 0x557df82f8111 0x557df82f7329 0x557df82f780d 0x7ff34d5d73c0 0x7ff34d41418b 0x7ff34d3f3859 0x557df6ac37cb 0x557df6b8bb4e 0x557df6a61617 0x557df6a61833 0x557df6a61b5c 0x557df6c473fb 0x7ff34d5cb609 0x7ff34d4f0293
+----- BEGIN BACKTRACE -----
+{"backtrace":[{"b":"557DF614D000","o":"21AB111","s":"_ZN5mongo15printStackTraceERSo"},{"b":"557DF614D000","o":"21AA329"},{"b":"557DF614D000","o":"21AA80D"},{"b":"7FF34D5C2000","o":"153C0"},{"b":"7FF34D3CE000","o":"4618B","s":"gsignal"},{"b":"7FF34D3CE000","o":"25859","s":"abort"},{"b":"557DF614D000","o":"9767CB","s":"_ZN5mongo32fassertFailedNoTraceWithLocationEiPKcj"},{"b":"557DF614D000","o":"A3EB4E"},{"b":"557DF614D000","o":"914617","s":"__wt_eventv"},{"b":"557DF614D000","o":"914833","s":"__wt_err"},{"b":"557DF614D000","o":"914B5C","s":"__wt_panic"},{"b":"557DF614D000","o":"AFA3FB"},{"b":"7FF34D5C2000","o":"9609"},{"b":"7FF34D3CE000","o":"122293","s":"clone"}],"processInfo":{ "mongodbVersion" : "3.6.0", "gitVersion" : "a57d8e71e6998a2d0afde7edc11bd23e5661c915", "compiledModules" : [], "uname" : { "sysname" : "Linux", "release" : "5.19.0-1025-gcp", "version" : "#27~22.04.1-Ubuntu SMP Wed May 24 03:53:01 UTC 2023", "machine" : "x86_64" }, "somap" : [ { "b" : "557DF614D000", "elfType" : 3, "buildId" : "0900573D611BFAA62156892DB8AAF9BC4331496B" }, { "b" : "7FFFB2B44000", "path" : "linux-vdso.so.1", "elfType" : 3, "buildId" : "394758186051A90A05B1731A760BE7B2ED0EF773" }, { "b" : "7FF34D760000", "path" : "/lib/x86_64-linux-gnu/libresolv.so.2", "elfType" : 3, "buildId" : "6BCE6EF9E884DDA05E19F944A6C6BF85C71D09E8" }, { "b" : "7FF34D755000", "path" : "/lib/x86_64-linux-gnu/librt.so.1", "elfType" : 3, "buildId" : "6CDA073FE8C5AD39999BB8640305656CAA67CC8C" }, { "b" : "7FF34D74F000", "path" : "/lib/x86_64-linux-gnu/libdl.so.2", "elfType" : 3, "buildId" : "A3F78028221CF3B784DD5E10D05AD7A55A6A85D5" }, { "b" : "7FF34D600000", "path" : "/lib/x86_64-linux-gnu/libm.so.6", "elfType" : 3, "buildId" : "44B3FC3330F57F48B1EED34A9A8E982C6D1EF76D" }, { "b" : "7FF34D5E5000", "path" : "/lib/x86_64-linux-gnu/libgcc_s.so.1", "elfType" : 3, "buildId" : "4ABD133CC80E01BB388A9C42D9E3CB338836544A" }, { "b" : "7FF34D5C2000", "path" : "/lib/x86_64-linux-gnu/libpthread.so.0", "elfType" : 3, "buildId" : "E54761F7B554D0FCC1562959665D93DFFBEBDAF0" }, { "b" : "7FF34D3CE000", "path" : "/lib/x86_64-linux-gnu/libc.so.6", "elfType" : 3, "buildId" : "099B9225BCB0D019D9D60884BE583EB31BB5F44E" }, { "b" : "7FF34D781000", "path" : "/lib64/ld-linux-x86-64.so.2", "elfType" : 3, "buildId" : "5374B5558386B815E69CC1838A6052CC9B4746F3" } ] }}
+ mongod(_ZN5mongo15printStackTraceERSo+0x41) [0x557df82f8111]
+ mongod(+0x21AA329) [0x557df82f7329]
+ mongod(+0x21AA80D) [0x557df82f780d]
+ libpthread.so.0(+0x153C0) [0x7ff34d5d73c0]
+ libc.so.6(gsignal+0xCB) [0x7ff34d41418b]
+ libc.so.6(abort+0x12B) [0x7ff34d3f3859]
+ mongod(_ZN5mongo32fassertFailedNoTraceWithLocationEiPKcj+0x0) [0x557df6ac37cb]
+ mongod(+0xA3EB4E) [0x557df6b8bb4e]
+ mongod(__wt_eventv+0x3D7) [0x557df6a61617]
+ mongod(__wt_err+0x9D) [0x557df6a61833]
+ mongod(__wt_panic+0x33) [0x557df6a61b5c]
+ mongod(+0xAFA3FB) [0x557df6c473fb]
+ libpthread.so.0(+0x9609) [0x7ff34d5cb609]
+ libc.so.6(clone+0x43) [0x7ff34d4f0293]
+-----  END BACKTRACE  -----
